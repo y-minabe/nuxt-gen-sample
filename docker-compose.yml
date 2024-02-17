@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+  sample_front:
+    container_name: sample_front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 80:80
+    tty: true
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: 2048M
